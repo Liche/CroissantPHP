@@ -2,10 +2,10 @@
 
 namespace Test\Controller;
 
-use Lib\Response;
+use Lib\Http\ViewResponse;
 
 class TestController {
   public function testAction() {
-    return new Response("test");
+    return new ViewResponse("Test/test.php", ['test_value' => 'Works !']);
   }
 }
