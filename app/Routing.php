@@ -4,7 +4,7 @@ final class Routing {
 
   public static function getRoutes() {
     return [
-
+      'test' => 'Test\Controller\TestController:testAction'
     ];
   }
 

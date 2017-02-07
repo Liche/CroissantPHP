@@ -7,13 +7,13 @@ class Response {
   protected $body;
   protected $headers;
 
-  public function __construct($body, $statusCode) {
+  public function __construct($body, $statusCode = 200) {
     $this->headers = [];
     $this->body = $body;
     $this->statusCode = $statusCode;
   }
 
-  public function setStatusCode($statusCode = 200) {
+  public function setStatusCode($statusCode) {
     $this->statusCode = $statusCode;
   }
 
