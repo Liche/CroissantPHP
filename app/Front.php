@@ -1,7 +1,7 @@
 <?php
 
-use Lib\Router;
-use Lib\Response;
+use Lib\Routing\Router;
+use Lib\Http\Response;
 
 require_once "Routing.php";
 
