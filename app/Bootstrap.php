@@ -7,9 +7,7 @@ use Lib\EntityManager\EntityManager;
 
 class Bootstrap {
   public function boot() {
-    $entityManager = EntityManager::getManager();
     $front = new Front();
     $front->run();
-
   }
 }
