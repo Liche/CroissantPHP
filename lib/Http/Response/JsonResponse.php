@@ -6,6 +6,8 @@ use Lib\Http\StatusCodes;
 
 class JsonResponse extends BaseResponse {
   public function render() {
+    $this->headers['Content-Type'] = 'application/json';
+
     foreach($this->headers as $type => $value) {
       header(sprintf("%s: %s", $type, $value));
     }
