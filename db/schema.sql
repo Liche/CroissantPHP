@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS food;
+
+CREATE TABLE food (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(64) NOT NULL,
+  quantity unsigned INT NOT NULL
+);

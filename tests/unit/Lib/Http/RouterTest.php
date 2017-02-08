@@ -1,6 +1,6 @@
 <?php
 
-namespace Lib;
+namespace Lib\Http;
 
 class RouterTest extends \PHPUnit_Framework_TestCase {
   /**

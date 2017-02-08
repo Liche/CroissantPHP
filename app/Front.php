@@ -14,7 +14,10 @@ class Front {
       } else {
         $controllerClass = $route->getController();
         $controller = new $controllerClass();
-        $response = call_user_func(array($controller, $route->getAction()));
+        $response = call_user_func(
+          [$controller, $route->getAction()],
+          $route->getParameters()
+        );
       }
 
       $response->render();

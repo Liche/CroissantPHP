@@ -13,7 +13,7 @@ class Router {
     $uri = $this->normalize($uri);
 
     foreach ($this->routes as $match => $route) {
-      if (preg_match(sprintf("#^%s$#", $uri), $match, $matches)) {
+      if (preg_match(sprintf("#^%s$#", $match), $uri, $matches)) {
         return new Route($uri, $route, $matches);
       }
     }

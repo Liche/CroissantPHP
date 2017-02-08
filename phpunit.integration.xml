@@ -1,0 +1,5 @@
+<testsuites>
+  <testsuite name="Integration Tests">
+    <directory>tests/integration</directory>
+  </testsuite>
+</testsuites>
