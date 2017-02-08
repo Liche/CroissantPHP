@@ -4,7 +4,7 @@ namespace Test\Controller;
 
 use Lib\EntityManager\EntityManager;
 use Lib\Http\Verb;
-use Lib\Http\JsonResponse;
+use Lib\Http\Response\JsonResponse;
 use Test\Entity\Food;
 
 class FoodController {

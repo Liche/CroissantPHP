@@ -1,7 +1,7 @@
 <?php
 
 use Lib\Routing\Router;
-use Lib\Http\Response;
+use Lib\Http\Response\BaseResponse;
 
 require_once "Routing.php";
 
@@ -10,7 +10,7 @@ class Front {
       $router = new Router(Routing::getRoutes());
       $route = $router->match($_SERVER["REQUEST_URI"]);
       if (!$route) {
-        $response = new Response("", 404);
+        $response = new BaseResponse("", 404);
       } else {
         $controllerClass = $route->getController();
         $controller = new $controllerClass();

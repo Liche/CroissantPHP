@@ -1,8 +1,8 @@
 <?php
 
-namespace Lib\Http;
+namespace Lib\Http\Response;
 
-class ViewResponse extends Response {
+class ViewResponse extends BaseResponse {
   protected $parameters;
 
   public function __construct($viewFile, $parameters) {

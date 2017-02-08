@@ -1,8 +1,10 @@
 <?php
 
-namespace Lib\Http;
+namespace Lib\Http\Response;
 
-class JsonResponse extends Response {
+use Lib\Http\StatusCodes;
+
+class JsonResponse extends BaseResponse {
   public function render() {
     foreach($this->headers as $type => $value) {
       header(sprintf("%s: %s", $type, $value));

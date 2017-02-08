@@ -2,6 +2,8 @@
 
 namespace Lib\Http;
 
+use Lib\Routing\Router;
+
 class RouterTest extends \PHPUnit_Framework_TestCase {
   /**
    * @test
@@ -17,7 +19,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase {
     $route = $router->match('test/route1');
 
     $this->assertNotNull($route);
-    $this->assertInstanceOf('Lib\Route', $route);
+    $this->assertInstanceOf('Lib\Routing\Route', $route);
 
     $this->assertEquals('TestController', $route->getController());
     $this->assertEquals('Route1', $route->getAction());
@@ -25,7 +27,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase {
     $route = $router->match('test/route2?get_parameter=test');
 
     $this->assertNotNull($route);
-    $this->assertInstanceOf('Lib\Route', $route);
+    $this->assertInstanceOf('Lib\Routing\Route', $route);
 
     $this->assertEquals('TestController', $route->getController());
     $this->assertEquals('Route2', $route->getAction());

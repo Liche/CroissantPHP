@@ -2,7 +2,7 @@
 
 namespace Test\Controller;
 
-use Lib\Http\ViewResponse;
+use Lib\Http\Response\ViewResponse;
 
 class TestController {
   public function testAction() {
